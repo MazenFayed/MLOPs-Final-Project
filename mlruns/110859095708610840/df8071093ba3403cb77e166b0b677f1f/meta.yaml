@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/Courses/MLops/MLOPs-Final-Project/mlruns/110859095708610840/df8071093ba3403cb77e166b0b677f1f/artifacts
+end_time: 1748511022004
+entry_point_name: ''
+experiment_id: '110859095708610840'
+lifecycle_stage: active
+run_id: df8071093ba3403cb77e166b0b677f1f
+run_name: lr
+run_uuid: df8071093ba3403cb77e166b0b677f1f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748511012785
+status: 3
+tags: []
+user_id: mazen
