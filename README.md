@@ -1,211 +1,191 @@
-# 🎮 Astray - Gesture-controlled 3D Maze Game with ML Monitoring
+# 🎮 Game
 
-Astray is an interactive 3D maze game where you control a ball using either keyboard controls or hand gestures. The game features progressively challenging mazes, smooth 3D graphics powered by Three.js, and includes ML model monitoring capabilities.
+_Astray_ is a dynamic 3D maze game where you steer a rolling ball using either your keyboard or intuitive hand gestures. Built with Three.js for sleek visuals, the game scales in complexity and integrates a powerful ML performance tracking system.
 
-## ✨ Features
+## ✨ Key Highlights
 
-- 🎯 3D maze navigation with realistic ball physics
-- 👋 Hand gesture control using MediaPipe
-- ⌨️ Keyboard controls as an alternative input method
-- 📈 Progressive difficulty with increasing maze sizes
-- 👁️ Real-time hand tracking visualization
-- 🎨 Modern 3D graphics with textured walls and ground
-- 📊 ML model monitoring with Prometheus and Grafana
-- 🐳 Docker containerization for easy deployment
+- 🌀 Realistic ball movement within intricate 3D mazes
+- ✋ Gesture-based navigation via MediaPipe
+- ⌨️ Keyboard support as a fallback control method
+- 🚀 Gradually increasing maze complexity
+- 👁️ Live hand-tracking feedback overlay
+- 🌐 Modern visual style with textured environments
+- 📡 Integrated ML observability with Prometheus & Grafana
+- 📦 Easy deployment using Docker containers
 
-## 🔧 Prerequisites
+## 🔧 System Requirements
 
-- 🌐 A modern web browser (Chrome, Firefox, Safari, or Edge)
-- 📹 Webcam for gesture control (optional)
-- 🐳 Docker and Docker Compose (for ML monitoring setup)
-- 🐍 Python 3.8+ (for ML components)
-- 💻 Basic understanding of web development (for setup)
+- 🌍 Up-to-date browser (Chrome, Firefox, Safari, or Edge)
+- 📸 Webcam (for gesture control)
+- 🐋 Docker & Docker Compose (for ML monitoring)
+- 🐍 Python 3.8 or higher
+- 🛠️ Basic web dev skills for setup
 
-## 🚀 Installation
+## 🚀 Quick Start Guide
 
-1. Clone the repository:
+1. Clone this repo:
 ```bash
-git clone https://github.com/yourusername/astray.git
+[git clone https://github.com/M/astray.git](https://github.com/MazenFayed/MLOPs-Final-Project.git)
 cd astray
 ```
 
-2. Install Python dependencies:
+2. Install required Python libraries:
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Start the ML monitoring stack using Docker:
+3. Launch ML monitoring stack:
 ```bash
 docker-compose up -d
 ```
 
-4. Ensure you have the following files in your project directory:
-   - 📄 `index.html`
-   - 🎾 `ball.png` (ball texture)
-   - 🧱 `brick.png` (wall texture)
-   - 🏗️ `concrete.png` (ground texture)
+4. Confirm you have the essential assets:
+   - `index.html`
+   - `ball.png`, `brick.png`, `concrete.png`
 
-5. Open `index.html` in your web browser or set up a local server:
+5. Open the game:
 ```bash
-# Using Python
+# Python server
 python -m http.server 8000
 
-# Using Node.js
+# Or with Node.js
 npx serve
 ```
 
-## 🎮 How to Play
+## 🕹️ Playing the Game
 
-### 🎹 Controls
+### 🔧 Controls
 
-#### Keyboard Controls:
-- ⬆️⬇️⬅️➡️ Arrow Keys or H/J/K/L: Move the ball
-- 🔄 G: Toggle gesture control
-- ℹ️ I: Show/hide instructions
+#### Keyboard:
+- Arrows or H/J/K/L to move
+- G: Enable/disable gesture control
+- I: Show instructions
 
-#### Gesture Controls:
-- ☝️ One finger: Move Up
-- ✊ Fist: Move Down
-- ✌️ Two fingers: Move Left
-- 🤟 Three fingers: Move Right
+#### Gestures:
+- One finger ☝️ → Up
+- Fist ✊ → Down
+- Two fingers ✌️ → Left
+- Three fingers 🤟 → Right
 
-### 🎯 Gameplay
+### 🎯 Objective
 
-1. 🎯 The goal is to navigate the ball through the maze to reach the exit
-2. 📈 Each level increases in difficulty with a larger maze
-3. 🛑 The ball will stop when hitting walls
-4. 📹 The camera follows the ball's movement
-5. ⏱️ Gesture control requires holding the gesture for a brief moment
+- Navigate to the maze's exit
+- Levels become harder with larger mazes
+- Ball halts on wall impact
+- Camera dynamically follows the ball
+- Gestures must be held briefly for recognition
 
-## 💻 Technical Details
+## 🛠️ Tech Stack
 
-### 🛠️ Technologies Used
+- 🌐 Three.js (r128) for 3D rendering
+- ✋ MediaPipe Hands for gesture input
+- 📹 HTML5 Canvas for hand visuals
+- 🧠 Vanilla JavaScript game logic
+- 📊 Prometheus for collecting metrics
+- 📈 Grafana for dashboards
+- 🐳 Docker for isolated services
+- 🔍 MLflow for model experiment logging
 
-- 🎨 Three.js (r128) for 3D rendering
-- 🤖 MediaPipe Hands for gesture recognition
-- 🎯 HTML5 Canvas for hand tracking visualization
-- ⚡ Vanilla JavaScript for game logic
-- 📊 Prometheus for metrics collection
-- 📈 Grafana for metrics visualization
-- 🐳 Docker for containerization
-- 🔬 MLflow for experiment tracking
-
-### 📁 Project Structure
+## 🗂️ Project Layout
 
 ```
 astray/
-├── 📂 app/                # Application code
-├── 🧪 tests/             # Test files
-├── 📊 grafana/           # Grafana dashboards
-├── 📈 mlruns/            # MLflow experiment tracking
-├── 📄 index.html         # Main game file
-├── 🎾 ball.png           # Ball texture
-├── 🧱 brick.png          # Wall texture
-├── 🏗️ concrete.png       # Ground texture
-├── 🐳 dockerfile         # Docker configuration
-├── 🐳 docker-compose.yml # Docker services configuration
-├── 📊 prometheus.yml     # Prometheus configuration
-├── 📋 requirements.txt   # Python dependencies
-└── 📖 README.md          # This file
+├── app/                  # Core app logic
+├── tests/                # Unit tests
+├── grafana/              # Dashboard configs
+├── mlruns/               # MLflow tracking logs
+├── index.html            # Main web interface
+├── ball.png              # Ball texture
+├── brick.png             # Wall texture
+├── concrete.png          # Floor texture
+├── dockerfile            # Docker config
+├── docker-compose.yml    # Docker service definitions
+├── prometheus.yml        # Prometheus setup
+├── requirements.txt      # Dependencies
+└── README.md             # Project documentation
 ```
 
-## 🤖 ML Monitoring Setup
+## 📊 ML Monitoring Overview
 
-The project includes a complete ML monitoring stack for model selection and performance tracking:
+An integrated ML observability suite provides real-time insight into model behavior.
 
-1. **Model Selection Pipeline** 🔄
-   - 🤖 Automated comparison between RandomForest, SVM, and LightGBM models
-   - 📊 Model performance metrics tracked in MLflow
-   - ⚡ Automatic model selection based on accuracy and inference time
-   - 🔧 Hyperparameter tuning with MLflow tracking
+### 🔍 Model Evaluation Pipeline
 
-2. **MLflow** 🔬
-   - 📦 Model versioning and registry
-   - 📊 Experiment tracking for all three models
-   - 📈 Performance metrics comparison
-   - 📁 Model artifacts storage
-   - 🌐 Access at: http://localhost:5000
+- 🤖 Compare RandomForest, SVM, and LightGBM
+- 📊 Log performance using MLflow
+- ⚙️ Choose best model via accuracy & latency
+- 🎯 Tune hyperparameters with tracking support
 
-<img src="./assets/models.png" alt="Maze Demo" width="500"/>
-<img src="./assets/lgbm.png" alt="Maze Demo" width="500"/>
-<img src="./assets/rf.png" alt="Maze Demo" width="500"/>
-<img src="./assets/svm.png" alt="Maze Demo" width="500"/>
+### 🔬 MLflow
 
-3. **Prometheus** 📊
-   - 📈 Real-time model performance metrics
-   - ⏱️ Inference latency tracking
-   - 💻 Resource utilization monitoring
-   - 🚨 Custom metrics for model drift detection
-   - 🌐 Access at: http://localhost:9090
+- 🔁 Versioning and model registry
+- 📈 Metric comparison across runs
+- 🗃️ Store artifacts and parameters
+- 🌐 Interface: http://localhost:5000
 
-4. **Grafana** 📈
-   - 📊 Real-time model performance dashboards
-   - 📉 Model comparison visualizations
-   - 💻 Resource utilization graphs
-   - 🚨 Custom alerts for model drift
-   - 🌐 Access at: http://localhost:3000
-   - 🔑 Default credentials: admin/admin
+### 📡 Prometheus
 
-<img src="./assets/RD.png" alt="Maze Demo" width="500"/>
-<img src="./assets/RC.png" alt="Maze Demo" width="500"/>
-<img src="./assets/RDA.png" alt="Maze Demo" width="500"/>
+- 📊 Monitor metrics in real time
+- 🕒 Track inference latency
+- 🖥️ Monitor CPU/memory usage
+- 🚨 Custom alerts for drift detection
+- 🌐 Interface: http://localhost:9090
 
+### 📈 Grafana
 
+- 📊 Dynamic dashboards
+- 📉 Compare model metrics
+- 🖥️ System performance graphs
+- 🚨 Alert triggers for anomalies
+- 🌐 Interface: http://localhost:3000
+- 🔑 Default login: admin/admin
 
-### 🐳 Docker Services
-
-The project uses Docker containers for all ML components:
+### 🐳 Docker Setup
 
 ```yaml
 services:
-  - 📊 prometheus: Latest version for metrics collection
-  - 📈 grafana: Latest version for visualization
-  - 🔬 mlflow: Latest version for experiment tracking
-  - 🤖 model-service: Custom service for model inference
+  - prometheus: For collecting metrics
+  - grafana: For real-time dashboards
+  - mlflow: For model tracking
+  - model-service: Custom inference API
 ```
 
-### 🔄 Model Selection Process
+### 🔁 Model Lifecycle
 
-1. **Data Collection** 📥
-   - 🎮 Game state data collection
-   - 👤 Player interaction metrics
-   - 📊 Performance metrics
+1. **Data Logging** 📥
+   - Player activity and state tracking
+   - Model inference metrics
 
 2. **Model Training** 🎓
-   - 🌲 RandomForest: For robust classification
-   - 📐 SVM: For high-dimensional data
-   - ⚡ LightGBM: For fast inference and high accuracy
+   - 🌲 RandomForest
+   - 📐 Support Vector Machine
+   - ⚡ LightGBM
 
-3. **Performance Monitoring** 📊
-   - 🎯 Real-time accuracy tracking
-   - ⏱️ Inference latency monitoring
-   - 💻 Resource utilization tracking
-   - 🚨 Model drift detection
+3. **Performance Insights** 📊
+   - Track accuracy, latency, and system load
+   - Detect potential model degradation
 
-4. **Model Deployment** 🚀
-   - 🤖 Automatic model selection based on metrics
-   - 🐳 Containerized deployment
-   - A/B testing capability
-   - 🔄 Rollback support
+4. **Deployment** 🚀
+   - Automated model selection and deployment
+   - Rollback and A/B testing support
 
-## 👥 Contributing
+## 🤝 Contributions
 
-1. 🍴 Fork the repository
-2. 🌿 Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. 💾 Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. 📤 Push to the branch (`git push origin feature/AmazingFeature`)
-5. 🔄 Open a Pull Request
+1. Fork the repo 🍴
+2. Create a branch 🌿 (`git checkout -b feature/YourFeature`)
+3. Commit changes 💾 (`git commit -m 'Your feature'`)
+4. Push updates 📤 (`git push origin feature/YourFeature`)
+5. Submit a pull request 🔄
 
-## 📄 License
+## 📃 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+MIT License – see LICENSE for full details.
 
-## 🙏 Acknowledgments
+## 🙌 Credits
 
-- 🎨 Three.js community for the 3D rendering library
-- 🤖 MediaPipe team for the hand tracking solution
-- 🎮 Original Astray project for maze generation algorithm
-- 📊 Prometheus and Grafana communities for monitoring tools
+- 🎨 Three.js community
+- 🧠 MediaPipe developers
+- 🧩 Original Astray maze logic
+- 📊 Prometheus & Grafana teams
 
-
-Enjoy playing Astray! 🎮
+Have fun exploring Astray! 🌀
